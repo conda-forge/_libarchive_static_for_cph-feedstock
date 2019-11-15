@@ -30,7 +30,7 @@ source:
     - patches/0010-Use-CreateSymbolicLinkW-on-Windows-for-symlinks-WIP.patch
 
 build:
-  number: 1
+  number: 2
   ignore_run_exports:
     - bzip2
     - libiconv
