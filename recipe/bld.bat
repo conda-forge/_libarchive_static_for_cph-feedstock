@@ -26,8 +26,8 @@ if "%vc%" NEQ "9" goto not_vc9
 :: This does not work yet:
 :: usage: cl [ option... ] filename... [ /link linkoption... ]
   set USE_C99_WRAP=no
-  copy %LIBRARY_INC%\inttypes.h src\common\inttypes.h %exit_on_error%
-  copy %LIBRARY_INC%\stdint.h src\common\stdint.h %exit_on_error%
+  copy %LIBRARY_INC%\inttypes.h src\common\inttypes.h
+  copy %LIBRARY_INC%\stdint.h src\common\stdint.h
   goto endit
 :not_vc9
   set USE_C99_WRAP=no
@@ -105,12 +105,12 @@ cmake --build . --target install --config Release %exit_on_error%
 ::if errorlevel 1 exit 1
 
 :: remove man pages
-rd /s /q %PREFIX%\Library\share\man %exit_on_error%
+rd /s /q %PREFIX%\Library\share\man
 
 :: remove the dynamic libraries
-del %PREFIX%\Library\bin\archive.DLL %exit_on_error%
-del %PREFIX%\Library\lib\archive.lib %exit_on_error%
+del %PREFIX%\Library\bin\archive.DLL
+del %PREFIX%\Library\lib\archive.lib
 
 pushd %PREFIX%\Library\lib
-lib.exe /OUT:archive_and_deps.lib archive_static.lib libzstd_static.lib bzip2_static.lib zlibstatic.lib %exit_on_error%
+lib.exe /OUT:archive_and_deps.lib archive_static.lib libzstd_static.lib bzip2_static.lib zlibstatic.lib
 popd
