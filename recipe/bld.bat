@@ -1,5 +1,5 @@
 @echo on
-set "exit_on_error=|| exit /b"
+set "exit_on_error=|| exit /b 1"
 
 :: Needed so we can find stdint.h from msinttypes.
 set LIB=%LIBRARY_LIB%;%LIB%
