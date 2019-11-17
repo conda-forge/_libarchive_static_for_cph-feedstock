@@ -46,7 +46,7 @@ set C99_TO_C89_CONV_DEBUG_LEVEL=1
 :: Fix an error during VC14 build.
 :: See https://github.com/conda-forge/conda-forge.github.io/issues/703
 :: and https://github.com/conda-forge/_libarchive_static_for_cph-feedstock/issues/5
-set CMAKE_GENERATOR="nmake"
+set CMAKE_GENERATOR="NMake Makefiles"
 
 cmake -G "%CMAKE_GENERATOR%" ^
       -DCMAKE_INSTALL_PREFIX="%LIBRARY_PREFIX%" ^
