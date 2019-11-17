@@ -72,14 +72,14 @@ test:
     # Verify headers are in place.
     - test -f "${PREFIX}/include/archive.h"                              # [unix]
     - test -f "${PREFIX}/include/archive_entry.h"                        # [unix]
-    - if not exist %PREFIX%\Library\include\archive.h" exit /b 1         # [win]
-    - if not exist %PREFIX%\Library\include\archive_entry.h" exit /b 1   # [win]
+    - if not exist %PREFIX%\Library\include\archive.h exit /b 1         # [win]
+    - if not exist %PREFIX%\Library\include\archive_entry.h exit /b 1   # [win]
 
     # Verify libraries are in place.
     - test -f "${PREFIX}/lib/libarchive.a"                               # [unix]
     - test -f "${PREFIX}/lib/libarchive_and_deps.a"                      # [unix]
-    - if not exist %PREFIX%\Library\lib\archive_static.lib" exit /b 1    # [win]
-    - if not exist %PREFIX%\Library\lib\archive_and_deps.lib" exit /b 1  # [win]
+    - if not exist %PREFIX%\Library\lib\archive_static.lib exit /b 1    # [win]
+    - if not exist %PREFIX%\Library\lib\archive_and_deps.lib exit /b 1  # [win]
 
 about:
   home: http://www.libarchive.org/
