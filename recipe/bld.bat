@@ -48,7 +48,7 @@ set C99_TO_C89_CONV_DEBUG_LEVEL=1
 :: and https://github.com/conda-forge/_libarchive_static_for_cph-feedstock/issues/5
 set CMAKE_GENERATOR="NMake Makefiles"
 
-cmake -G "%CMAKE_GENERATOR%" ^
+cmake -G %CMAKE_GENERATOR% ^
       -DCMAKE_INSTALL_PREFIX="%LIBRARY_PREFIX%" ^
       %COMPILER% ^
       -DCMAKE_BUILD_TYPE=Release ^
