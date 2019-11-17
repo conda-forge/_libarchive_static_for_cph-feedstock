@@ -43,6 +43,11 @@ set C99_TO_C89_CONV_DEBUG_LEVEL=1
 :skip_c99_wrap
 :: set cflags because NDEBUG is set in Release configuration, which errors out in test suite due to no assert
 
+:: Fix an error during VC14 build.
+:: See https://github.com/conda-forge/conda-forge.github.io/issues/703
+:: and https://github.com/conda-forge/_libarchive_static_for_cph-feedstock/issues/5
+set CMAKE_GENERATOR="nmake"
+
 cmake -G "%CMAKE_GENERATOR%" ^
       -DCMAKE_INSTALL_PREFIX="%LIBRARY_PREFIX%" ^
       %COMPILER% ^
