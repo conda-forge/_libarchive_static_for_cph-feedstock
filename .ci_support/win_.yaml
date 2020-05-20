@@ -3,7 +3,7 @@ CMAKE_GENERATOR:
 bzip2:
 - '1'
 c_compiler:
-- vs2015
+- vs2017
 channel_sources:
 - conda-forge,defaults
 channel_targets:
@@ -15,17 +15,12 @@ pin_run_as_build:
     max_pin: x
   libiconv:
     max_pin: x.x
-  vc:
-    max_pin: x
   zlib:
     max_pin: x.x
   zstd:
     max_pin: x.x.x
 vc:
 - '14'
-zip_keys:
-- - vc
-  - c_compiler
 zlib:
 - '1.2'
 zstd:
