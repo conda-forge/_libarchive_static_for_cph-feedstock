@@ -90,8 +90,8 @@ cmake --build . --target install --config Release
 
 :: %exit_on_error%
 
-cat CMakeFiles/CMakeOutput.log
-cat CMakeFiles/CMakeError.log
+type CMakeFiles\CMakeOutput.log
+type CMakeFiles\CMakeError.log
 
 exit /b 1
 
