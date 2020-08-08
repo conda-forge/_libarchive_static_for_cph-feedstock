@@ -86,14 +86,7 @@ cmake -G %CMAKE_GENERATOR% ^
 :build
 
 :: Build.
-cmake --build . --target install --config Release 
-
-:: %exit_on_error%
-
-type CMakeFiles\CMakeOutput.log
-type CMakeFiles\CMakeError.log
-
-exit /b 1
+cmake --build . --target install --config Release %exit_on_error%
 
 :: Test.
 :: Failures:
