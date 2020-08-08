@@ -46,7 +46,7 @@ set C99_TO_C89_CONV_DEBUG_LEVEL=1
 :: Fix an error during VC14 build.
 :: See https://github.com/conda-forge/conda-forge.github.io/issues/703
 :: and https://github.com/conda-forge/_libarchive_static_for_cph-feedstock/issues/5
-set CMAKE_GENERATOR="NMake Makefiles"
+set CMAKE_GENERATOR="NMake Makefiles JOM"
 
 cmake -G %CMAKE_GENERATOR% ^
       -DCMAKE_INSTALL_PREFIX="%LIBRARY_PREFIX%" ^
@@ -79,7 +79,7 @@ cmake -G %CMAKE_GENERATOR% ^
       -DENABLE_ZSTD=ON ^
       -DBZIP2_LIBRARY_RELEASE=%PREFIX%/Library/lib/bzip2_static.lib ^
       -DZLIB_LIBRARY_RELEASE=%PREFIX%/Library/lib/zlibstatic.lib ^
-      -DZSTD_LIBRARY=%PREFIX%/Library/lib/libzstd_static.lib ^
+      -DZSTD_LIBRARY=%PREFIX%/Library/lib/zstd_static.lib ^
       . ^
       %exit_on_error%
 
