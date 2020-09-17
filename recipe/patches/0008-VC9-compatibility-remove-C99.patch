@@ -76,8 +76,8 @@
 -			wchar_t *linkfull, *namefull;
 +			wchar_t const *linkfull, *namefull;
  
- 			// Not sure which is best here, this is an absolute link, always:
- 			// linkfull = __la_win_permissive_name_w(linkname);
+ 			linkfull = __la_win_permissive_name_w(linkname);
+    namefull = __la_win_permissive_name_w(a->name);
 --- work.orig/tar/test/test_option_C_mtree.c	2018-09-03 22:07:16.000000000 -0500
 +++ work/tar/test/test_option_C_mtree.c	2018-09-04 07:23:14.413229300 -0500
 @@ -30,10 +30,9 @@
