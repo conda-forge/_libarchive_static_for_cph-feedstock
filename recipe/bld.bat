@@ -79,7 +79,7 @@ cmake -G %CMAKE_GENERATOR% ^
       -DENABLE_ZSTD=ON ^
       -DBZIP2_LIBRARY_RELEASE=%PREFIX%/Library/lib/bzip2_static.lib ^
       -DZLIB_LIBRARY_RELEASE=%PREFIX%/Library/lib/zlibstatic.lib ^
-      -DZSTD_LIBRARY=%PREFIX%/Library/lib/libzstd_static.lib ^
+      -DZSTD_LIBRARY=%PREFIX%/Library/lib/zstd_static.lib ^
       . ^
       %exit_on_error%
 
