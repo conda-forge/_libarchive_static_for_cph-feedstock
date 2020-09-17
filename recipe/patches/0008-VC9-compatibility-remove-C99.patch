@@ -69,7 +69,7 @@
  			assert(SetEndOfFile(handle) != 0);
 --- work.orig/libarchive/archive_write_disk_windows.c	2018-09-04 07:15:12.902734600 -0500
 +++ work/libarchive/archive_write_disk_windows.c	2018-09-04 07:24:43.543382500 -0500
-@@ -1515,7 +1515,7 @@
+@@ -1515,6 +1515,6 @@
  		return symlink(linkname, a->name) ? errno : 0;
  #else
  		if (linkname != NULL) {
@@ -77,7 +77,6 @@
 +			wchar_t const *linkfull, *namefull;
  
  			linkfull = __la_win_permissive_name_w(linkname);
-    namefull = __la_win_permissive_name_w(a->name);
 --- work.orig/tar/test/test_option_C_mtree.c	2018-09-03 22:07:16.000000000 -0500
 +++ work/tar/test/test_option_C_mtree.c	2018-09-04 07:23:14.413229300 -0500
 @@ -30,10 +30,9 @@
