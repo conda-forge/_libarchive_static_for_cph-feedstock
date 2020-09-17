@@ -112,5 +112,5 @@ del %PREFIX%\Library\bin\archive.DLL
 del %PREFIX%\Library\lib\archive.lib
 
 pushd %PREFIX%\Library\lib
-lib.exe /OUT:archive_and_deps.lib archive_static.lib libzstd_static.lib bzip2_static.lib zlibstatic.lib
+lib.exe /OUT:archive_and_deps.lib archive_static.lib zstd_static.lib bzip2_static.lib zlibstatic.lib
 popd
