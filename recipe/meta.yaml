@@ -65,7 +65,8 @@ requirements:
     # defaults has one but conda-forge does not (yet).  Use the default
     # package by specifying the full version and build string
     - zstd 1.3.7 h1b0e4d7_0  # [win and vc<14]
-    - zstd                   # [not (win and vc<14)]
+    - zstd                   # [not ((win and vc<14) or unix)]
+    - zstd-static            # [unix]    
 
 test:
   commands:
