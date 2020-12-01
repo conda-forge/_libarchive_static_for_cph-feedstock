@@ -5,11 +5,9 @@ Home: http://www.libarchive.org/
 
 Package license: BSD-2-Clause
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/_libarchive_static_for_cph-feedstock/blob/master/LICENSE.txt)
 
 Summary: a static build of libarchive containing only conda-related parts
-
-
 
 Current build status
 ====================
