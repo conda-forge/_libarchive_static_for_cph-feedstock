@@ -1,4 +1,4 @@
-{% set version = "3.3.3" %}
+{% set version = "3.5.0" %}
 # 3.4.0 breaks some symlink stuff on macos.  Holding back for now.
 
 # Recipe for a static libarchive with support for the features needed for
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://github.com/libarchive/libarchive/releases/download/v{{ version }}/libarchive-{{ version }}.tar.gz
-  sha256: ba7eb1781c9fbbae178c4c6bad1c6eb08edab9a1496c64833d1715d022b30e2e
+  sha256: fc4bc301188376adc18780d35602454cc8df6396e1b040fbcbb0d4c0469faf54
   patches:
     - patches/0001-Add-lib-to-CMAKE_FIND_LIBRARY_PREFIXES-for-lzma.patch
     - patches/0002-xar-fix-bad-seek-in-move_reading_point.patch
@@ -30,7 +30,7 @@ source:
     - patches/0010-Use-CreateSymbolicLinkW-on-Windows-for-symlinks-WIP.patch
 
 build:
-  number: 4
+  number: 0
   ignore_run_exports:
     - bzip2
     - libiconv
@@ -39,8 +39,8 @@ build:
   # HACK: case-sensitive mismatch in latest conda-build
   missing_dso_whitelist:
     - Library/bin/VCRUNTIME140.dll    # [win]
-    - "*/MSVCR90.dll"                 # [win]
-    - "MSVCR90.dll"                   # [win]
+    - '*/MSVCR90.dll'                 # [win]
+    - MSVCR90.dll                     # [win]
 
 requirements:
   build:
