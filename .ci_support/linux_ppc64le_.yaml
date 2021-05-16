@@ -3,13 +3,15 @@ bzip2:
 c_compiler:
 - gcc
 c_compiler_version:
-- '8'
+- '9'
+cdt_name:
+- cos7
 channel_sources:
 - conda-forge,defaults
 channel_targets:
 - conda-forge main
 docker_image:
-- condaforge/linux-anvil-ppc64le
+- quay.io/condaforge/linux-anvil-ppc64le
 libiconv:
 - '1.16'
 pin_run_as_build:
@@ -24,4 +26,4 @@ target_platform:
 zlib:
 - '1.2'
 zstd:
-- '1.4'
+- '1.5'
