@@ -18,6 +18,11 @@ source:
 
 build:
   number: 0
+  ignore_run_exports_from:
+    - bzip2
+    - libiconv
+    - zlib
+    - zstd
 
 requirements:
   build:
@@ -33,7 +38,7 @@ requirements:
     - libiconv    # [osx]
     - zlib
     - zstd                   # [not unix]
-    - zstd-static            # [unix]    
+    - zstd-static            # [unix]
 
 test:
   commands:
@@ -48,9 +53,6 @@ test:
     - test -f "${PREFIX}/lib/libarchive_and_deps.a"                      # [unix]
     - if not exist %PREFIX%\Library\lib\archive_static.lib exit /b 1    # [win]
     - if not exist %PREFIX%\Library\lib\archive_and_deps.lib exit /b 1  # [win]
-    - if not exist %LIBRARY_LIB%\zstd_static.lib  exit 1       # [win]
-    - if not exist %LIBRARY_LIB%\bzip2_static.lib  exit 1      # [win]
-    - if not exist %LIBRARY_LIB%\zlibstatic.lib  exit 1        # [win]
 
 about:
   home: http://www.libarchive.org/
