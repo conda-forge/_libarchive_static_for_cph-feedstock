@@ -96,5 +96,6 @@ about:
 
 extra:
   recipe-maintainers:
+    - isuruf
     - msarahan
     - jjhelmus
